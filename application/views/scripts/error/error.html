@@ -1,0 +1,20 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>{{ exception.getMessage() }} | Error</title>
+	<meta name="generator" content="BBEdit 8.5" />
+</head>
+<body>
+	<h1>An error occurred</h1>
+	<h2>{{ message }}</h2>
+	{% if env == "development" %}
+		<h3>Exception information:</h3>
+		<p><b>Message:</b>&nbsp;{{ exception.getMessage() }}</p>
+		<h3>Stack trace:</h3>
+		<pre>{{ exception.getTraceAsString() }}</pre>
+		<h3>Request Parameters:</h3>
+		<pre>{% debug request.getParams() %}</pre>
+	{% endif %}
+</body>
+</html>

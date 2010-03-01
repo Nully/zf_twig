@@ -1,0 +1,14 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="ja" lang="ja">
+<head>
+	<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+	<title>Twig_Test</title>
+</head>
+<body>
+<h1>Index Action</h1>
+<h2>{{ name|trancate }}</h2>
+{# []や{} はTwig内で利用できる配列 #}
+<a href='{% helper url ["action": "second", "controller": hoge] %}'>test</a>
+</body>
+</html>
